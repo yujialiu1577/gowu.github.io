@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>联系我们 - CustomCan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        apple: {
+                            gray: '#f5f5f7',
+                            dark: '#1d1d1f',
+                            blue: '#0066cc',
+                            light: '#86868b'
+                        }
+                    },
+                    fontFamily: {
+                        sanfrancisco: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: var(--font-sanfrancisco); }
+    </style>
+</head>
+<body class="bg-white font-sanfrancisco">
+    <!-- 导航栏 -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-md text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-14">
+                <a href="index.html" class="text-xl font-semibold">CustomCan</a>
+                <div class="flex space-x-8">
+                    <a href="learn-more.html" class="text-sm hover:text-apple-blue transition-apple">了解更多</a>
+                    <a href="custom-order.html" class="text-sm hover:text-apple-blue transition-apple">立即定制</a>
+                    <a href="our-team.html" class="text-sm hover:text-apple-blue transition-apple">我们的团队</a>
+                    <a href="contact.html" class="text-sm text-apple-blue transition-apple">联系我们</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 联系我们区域 -->
+    <section class="pt-32 pb-20 bg-apple-gray">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-16 text-apple-dark">联系我们</h2>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- 联系信息 -->
+                <div class="bg-white rounded-xl shadow-xl p-8">
+                    <h3 class="text-2xl font-semibold mb-8 text-apple-dark">联系方式</h3>
+
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-apple-blue/10 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fa fa-map-marker text-xl text-apple-blue"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-lg mb-1">公司地址</h4>
+                                <p class="text-apple-light">上海市浦东新区张江高科技园区博云路2号</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-apple-blue/10 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fa fa-phone text-xl text-apple-blue"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-lg mb-1">联系电话</h4>
+                                <p class="text-apple-light">400-123-4567</p>
+                                <p class="text-apple-light text-sm mt-1">工作时间：9:00-18:00（周一至周五）</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-apple-blue/10 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fa fa-envelope text-xl text-apple-blue"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-lg mb-1">电子邮箱</h4>
+                                <p class="text-apple-light">custom@customcan.com</p>
+                                <p class="text-apple-light text-sm mt-1">24小时内回复</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 社交媒体 -->
+                    <div class="mt-10">
+                        <h4 class="font-semibold text-lg mb-4">关注我们</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center hover:bg-apple-blue hover:text-white transition-apple">
+                                <i class="fa fa-weixin"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center hover:bg-apple-blue hover:text-white transition-apple">
+                                <i class="fa fa-weibo"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center hover:bg-apple-blue hover:text-white transition-apple">
+                                <i class="fa fa-linkedin"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 联系表单 -->
+                <div class="bg-white rounded-xl shadow-xl p-8">
+                    <h3 class="text-2xl font-semibold mb-8 text-apple-dark">发送消息</h3>
+
+                    <form id="contact-form" class="space-y-6">
+                        <div>
+                            <label class="block text-apple-dark font-medium mb-2">姓名 *</label>
+                            <input type="text" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-apple-blue">
+                        </div>
+
+                        <div>
+                            <label class="block text-apple-dark font-medium mb-2">电话 *</label>
+                            <input type="tel" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-apple-blue">
+                        </div>
+
+                        <div>
+                            <label class="block text-apple-dark font-medium mb-2">邮箱 *</label>
+                            <input type="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-apple-blue">
+                        </div>
+
+                        <div>
+                            <label class="block text-apple-dark font-medium mb-2">留言内容 *</label>
+                            <textarea rows="5" required placeholder="请描述您的需求或问题..." class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-apple-blue"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full bg-apple-blue text-white py-4 rounded-lg font-medium hover:bg-apple-blue/90 transition-apple text-lg">
+                            发送消息
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="bg-apple-dark text-white py-12">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <a href="index.html" class="text-xl font-semibold mb-4 md:mb-0">CustomCan</a>
+                <div class="flex space-x-6">
+                    <a href="learn-more.html" class="text-gray-400 hover:text-white transition-apple">了解更多</a>
+                    <a href="custom-order.html" class="text-gray-400 hover:text-white transition-apple">立即定制</a>
+                    <a href="our-team.html" class="text-gray-400 hover:text-white transition-apple">我们的团队</a>
+                    <a href="contact.html" class="text-gray-400 hover:text-white transition-apple">联系我们</a>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400 text-sm">
+                <p>© 2026 CustomCan. 保留所有权利。</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 联系表单提交
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('消息发送成功！我们将尽快与您联系。');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
